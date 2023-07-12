@@ -1,0 +1,144 @@
+* {
+    font-family: Gill Sans, sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#skill-heading {
+    background-color: var(--bg-color2);
+    padding: 75px 0 0 0;
+    text-align: center;
+}
+
+body {
+    background: var(--bg-color2);
+    /* text-transform: uppercase; */
+}
+
+h1 {
+    text-align: center;
+    font-size: medium;
+}
+
+h3 {
+    margin: 5px;
+}
+
+.skill {
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.skill li {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar {
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.22);
+    transition: all 0.3s cubic-bezier(.25m.8, .25, 1);
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+}
+
+.html {
+    width: 85%;
+    animation: html 3s;
+}
+
+.css {
+    width: 60%;
+    animation: css 3s;
+}
+
+.php {
+    width: 87%;
+    animation: php 3s;
+}
+
+.javascript {
+    width: 40%;
+    animation: javascript 3s;
+}
+
+.python {
+    width: 70%;
+    animation: python 3s;
+}
+
+.c {
+    width: 75%;
+    animation: c 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes php {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 87%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes c {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}

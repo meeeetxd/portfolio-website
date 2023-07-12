@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="portfolio-container">
+            <div class="portfolio-row header-wrap">
+                <div class="brand-name">
+                    <a href="index.html" class="logo">Meet Patel</a>
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="portfolio-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="skills.html">My Skills</a>
+                        </li>
+                        <li>
+                            <a href="Resume.pdf">Resume</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="contact">
+        <div class="portfolio-container">
+            <div class="text-wrap">
+                <h2 class="main-title">Contact Me</h2>
+                <h2 class="hover-title">Contact Me</h2>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Enter your name here" required>
+                    <input type="email" name="email" placeholder="Enter your mail here" required>
+                    <textarea name="Message" rows="6" placeholder="Your query or message here.."></textarea>
+                    <button type="submit" class="sub-btn">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+            <div class="contact-info">
+                <span>
+                    Ahmedabad, Gujarat
+                </span>
+                <h3>meethilpatel92@gmail.com</h3>
+                <a href="#">
+                    +91 9510561948
+                </a>
+            </div>
+            <div class="social-link">
+                <ul>
+                    <li>
+                        <a href="https://github.com/meeeetxd">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/meeeetxd/">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/meet-patel-9aa64223a/">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzguKfJBX8gKWTroaMpr2C1PBIWkRTo1Mnehl4BJRA17GF93NahS2gmQQ1rTEHknAMWLA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully! ";
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 3000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
