@@ -83,6 +83,12 @@
         </div>
     </section>
     <script>
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector(".portfolio-nav").classList.toggle("show");
+        })
+    </script>
+    <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzguKfJBX8gKWTroaMpr2C1PBIWkRTo1Mnehl4BJRA17GF93NahS2gmQQ1rTEHknAMWLA/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
