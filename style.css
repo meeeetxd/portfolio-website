@@ -387,6 +387,11 @@ header .portfolio-row.header-wrap {
         width: 100%;
         order: 2;
     }
+    .name,
+    .mail,
+    .msgbox {
+        width: 90%;
+    }
 }
 
 
