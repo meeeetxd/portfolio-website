@@ -142,3 +142,15 @@ h3 {
         width: 75%;
     }
 }
+
+@media screen and (max-width:700px) {
+    h1,
+    h2,
+    h3 {
+        font-size: 3rem;
+    }
+    .skill {
+        width: 370px;
+        margin: 0px auto;
+    }
+}
